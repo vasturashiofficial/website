@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vastu Rashi</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#222;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+      position:relative;
+      color:white;
+    }
+
+    .overlay{
+      background:rgba(0,0,0,0.35);
+      width:100%;
+      height:100%;
+      padding:30px;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    .btn{
+      background:#73d7ff;
+      color:white;
+      padding:12px 22px;
+      border-radius:4px;
+      display:inline-block;
+    }
+
+    .hero-content{
+      margin-top:150px;
+    }
+
+    .hero-content h1{
+      font-size:70px;
+      font-weight:700;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-top:10px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:white;
+      padding:80px 0;
+    }
+
+    .about-wrapper{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:8px;
+    }
+
+    .about h2{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .about p{
+      color:#555;
+      margin-bottom:25px;
+    }
+
+    .purple-btn{
+      background:#7f74ff;
+      color:white;
+      padding:12px 24px;
+      border-radius:5px;
+      display:inline-block;
+    }
+
+    /* SERVICES */
+
+    .services{
+      padding:80px 0;
+      background:#faf7f4;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+      text-align:center;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    .card-content p{
+      color:#666;
+      font-size:14px;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonials{
+      background:white;
+      padding:80px 0;
+    }
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    .testimonial{
+      background:#f5f5f5;
+      padding:25px;
+      border-radius:8px;
+    }
+
+    .testimonial p{
+      margin-bottom:10px;
+    }
+
+    .testimonial h4{
+      color:#6a5cff;
+    }
+
+    /* SOCIAL */
+
+    .social{
+      padding:80px 0;
+      text-align:center;
+    }
+
+    .social h2{
+      font-size:44px;
+      margin-bottom:20px;
+    }
+
+    .social-icons{
+      margin-top:20px;
+    }
+
+    .social-icons a{
+      margin:0 10px;
+      font-size:24px;
+      color:#222;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:white;
+      padding:80px 0;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .contact img{
+      width:100%;
+      border-radius:8px;
+    }
+
+    .contact h2{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .contact-info p{
+      margin-bottom:15px;
+      color:#555;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:45px;
+      }
+
+      .about-wrapper,
+      .testimonial-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="overlay">
+
+      <nav class="container">
+        <div class="logo">VASTU RASHI</div>
+
+        <a href="#" class="btn">
+          Book Appointment
+        </a>
+      </nav>
+
+      <div class="hero-content container">
+        <h1>RASHIKA GOEL</h1>
+
+        <p>
+          Energy Never Lies. Once Aligned, Life Responds.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <div class="container about-wrapper">
+
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=687&auto=format&fit=crop" alt="About">
+
+      <div>
+        <h2>About VR</h2>
+
+        <p>
+          Vastu Rashi, founded in 2019, focuses on aligning your
+          space and energy to bring balance into your life through
+          Vastu Shastra, Astrology, Numerology, Tarot Card Reading,
+          personalized remedies, and more.
+        </p>
+
+        <a href="#" class="purple-btn">
+          Get In Touch
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Services & Strategies
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop">
+
+          <div class="card-content">
+            <h3>Vastu For Homes</h3>
+            <p>Holistic Vastu guidance for homes</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1170&auto=format&fit=crop">
+
+          <div class="card-content">
+            <h3>Vastu For Offices</h3>
+            <p>Energy improvement for business property</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=1170&auto=format&fit=crop">
+
+          <div class="card-content">
+            <h3>Astrology</h3>
+            <p>Personalized horoscope analysis guidance</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section class="testimonials">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Satisfied Clients
+      </h2>
+
+      <div class="testimonial-grid">
+
+        <div class="testimonial">
+          <p>
+            Rashika is an amazing astrologer and explains everything calmly.
+          </p>
+
+          <h4>- Muskan</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            The sessions were really good and to the point. Highly recommended.
+          </p>
+
+          <h4>- Dolly</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOCIAL -->
+
+  <section class="social">
+
+    <div class="container">
+
+      <h2>
+        Follow Us
+      </h2>
+
+      <p>@VASTURASHI</p>
+
+      <div class="social-icons">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact">
+
+    <div class="container contact-grid">
+
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1170&auto=format&fit=crop">
+
+      <div class="contact-info">
+
+        <h2>Partner With Us</h2>
+
+        <p>
+          <strong>Website:</strong><br>
+          www.vasturashi.in
+        </p>
+
+        <p>
+          <strong>Email:</strong><br>
+          vasturashiofficial@gmail.com
+        </p>
+
+        <p>
+          <strong>Phone:</strong><br>
+          +91 9873105233
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Vastu Rashi. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
